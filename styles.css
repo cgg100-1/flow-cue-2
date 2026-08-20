@@ -5,6 +5,8 @@
   --muted: #6d685f;
   --line: #cfc6b8;
   --accent: #f2a7b8;
+  --inhale: #f2a7b8;
+  --exhale: #9ec7ef;
   --content: 760px;
   --pad: clamp(20px, 5vw, 56px);
   --display: "Fraunces", Georgia, serif;
@@ -98,7 +100,7 @@ a { color: inherit; }
   font-family: var(--display);
   font-size: clamp(3.7rem, 10vw, 8.5rem);
   line-height: 0.85;
-  letter-spacing: -0.055em;
+  letter-spacing: 0.015em;
   font-weight: 600;
 }
 .hero h1 em {
@@ -238,11 +240,12 @@ a { color: inherit; }
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  background: var(--accent);
   padding: 0.12em 0.42em 0.14em;
   border-radius: 999px;
   white-space: nowrap;
 }
+.breath-inhale { background: var(--inhale); }
+.breath-exhale { background: var(--exhale); }
 
 .site-footer {
   display: flex;
