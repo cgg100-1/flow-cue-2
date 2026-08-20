@@ -34,7 +34,7 @@ function emphasiseBreath(text) {
   parts.forEach((part) => {
     if (/^(inhale|exhale)$/i.test(part)) {
       const span = document.createElement("span");
-      span.className = "breath";
+      span.className = `breath breath-${part.toLowerCase()}`;
       span.textContent = part;
       fragment.append(span);
     } else {
