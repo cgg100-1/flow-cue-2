@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A vertically scrolling yoga teaching cue reader.">
+  <title>Flow Cue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Flow Cue home">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span>Flow Cue</span>
+    </a>
+    <div class="header-meta">
+      <span id="currentSequence">Warm-up</span>
+      <span class="header-count"><span id="currentPose">1</span> / <span id="totalPoses">103</span></span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">200hr teaching sequence</p>
+      <h1 id="page-title">A script to<br><em>teach from.</em></h1>
+      <p class="hero-copy">Scroll naturally through the class. Each pose stays visually attached to the words you would actually say.</p>
+      <a class="start-link" href="#script">Start the flow <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <nav class="sequence-nav" aria-label="Jump to sequence">
+      <div class="sequence-nav-inner" id="sequenceNav"></div>
+    </nav>
+
+    <div id="script" class="script" aria-live="polite"></div>
+
+    <footer class="site-footer">
+      <span>Flow Cue</span>
+      <span>End of sequence · Savasana</span>
+    </footer>
+  </main>
+
+  <template id="poseTemplate">
+    <article class="pose">
+      <header class="pose-heading">
+        <span class="pose-number"></span>
+        <div class="pose-name-wrap">
+          <p class="pose-sanskrit"></p>
+          <h3 class="pose-english"></h3>
+        </div>
+      </header>
+      <p class="pose-cue"></p>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
